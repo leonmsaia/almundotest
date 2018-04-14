@@ -1,0 +1,103 @@
+body {
+  background-color: #f4f4f4; }
+
+.headerMain {
+  background-color: #0f3f7f;
+  margin-bottom: 20px; }
+
+.module-application {
+  box-shadow: 4px -1px 11px #ececec;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+  padding: 5px 0px; }
+
+.category-type {
+  list-style-type: none;
+  padding-left: 0;
+  float: left;
+  width: 100%;
+  margin-bottom: 0; }
+  .category-type li {
+    float: left;
+    width: 20px; }
+    .category-type li .icon-star {
+      float: left;
+      width: 20px;
+      height: 40px; }
+      .category-type li .icon-star use {
+        fill: #fdba12; }
+
+.separatorSec {
+  border-bottom: 5px solid #f4f4f4;
+  padding: 0 10px; }
+
+.padding-h {
+  padding: 0 10px; }
+
+.amenities-list {
+  list-style-type: none;
+  padding-left: 0;
+  float: left;
+  width: 100%; }
+  .amenities-list li {
+    float: left;
+    height: 30px;
+    margin-right: 15px; }
+    .amenities-list li img {
+      width: 25px;
+      height: 100%; }
+
+.hotel-card {
+  padding: 10px 0px; }
+  .hotel-card .price-container {
+    border-left: 1px dotted #828282; }
+  .hotel-card .call-to-action-sec {
+    padding: 25px 15px; }
+
+.filter-module {
+  float: left;
+  width: 100%;
+  padding: 10px 10px; }
+  .filter-module .filter-headline .icon-star {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 3px; }
+    .filter-module .filter-headline .icon-star use {
+      fill: #157ab1; }
+  .filter-module .filter-headline .icon-search {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; }
+    .filter-module .filter-headline .icon-search path {
+      fill: #157ab1; }
+  .filter-module .star-container {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0px 15px;
+    float: left;
+    width: 100%; }
+    .filter-module .star-container .star-item {
+      float: left;
+      margin-bottom: 10px;
+      width: 100%; }
+      .filter-module .star-container .star-item input {
+        margin-right: 5px; }
+      .filter-module .star-container .star-item .icon-star {
+        width: 115px;
+        height: 18px; }
+        .filter-module .star-container .star-item .icon-star use {
+          fill: #fdba12; }
+
+.filter-form {
+  padding: 10px 0px; }
+  .filter-form input {
+    padding: 2px 10px;
+    width: 100%; }
+
+.title-module {
+  margin-bottom: 10px; }

@@ -1,0 +1,147 @@
+<header class="navbar headerMain">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="./assets/commons/logo-almundo.svg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="container">
+  <div class="row">
+
+    <aside class="sidebar-app col-md-4">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="module-application">
+            <div class="headline-wrap separatorSec">
+              <h4>Filtros</h4>
+            </div>
+            <div class="filter-module separatorSec">
+
+              <form class="filter-form row">
+                <div class="col-md-12 title-module">
+                  <span class="filter-headline">
+                    <svg class="icon-search">
+                      <use xlink:href="./assets/prod/icons/filters/search.svg#Layer_1"></use>
+                    </svg>
+                    Nombre de Hotel
+                  </span>
+                  <div class="btn-collapse" data-toggle="collapse" data-target="#btn-collapse-filter-name"></div>
+                </div>
+
+                <div class="col-md-12 collapse show" id="btn-collapse-filter-name">
+                  <form class="row" #f="ngForm" novalidate>
+                    <div class="col-md-8">
+                        <input [(ngModel)]="hotelName" name="hotelName" type="text" placeholder="ingrese el nombre del hotel">
+                    </div>
+                    <div class="col-md-4">
+                      <button class="btn btn-primary btn-action">Aceptar</button>
+                    </div>
+                  </form>
+                </div>
+
+              </form>
+            </div>
+            <div class="filter-module padding-h">
+              <span class="filter-headline">
+                <svg class="icon-star">
+                  <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1"></use>
+                </svg>
+                Estrellas
+                <div class="btn-collapse" data-toggle="collapse" data-target="#btn-collapse-filter-stars"></div>
+              </span>
+              <form class="row" #f="ngForm" novalidate>
+                <ul class="star-container collapse show" id="btn-collapse-filter-stars">
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="">
+                    Todas las estrellas
+                  </li>
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="5">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-50' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-25' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='0' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='25' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='50' y='0'></use>
+                    </svg>
+                  </li>
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="4">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-50' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-25' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='0' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='25' y='0'></use>
+                    </svg>
+                  </li>
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="3">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-50' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-25' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='0' y='0'></use>
+                    </svg>
+                  </li>
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="2">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-50' y='0'></use>
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-25' y='0'></use>
+                    </svg>
+                  </li>
+                  <li class="star-item">
+                    <input [(ngModel)]="starFilter" type="radio" name="stars" value="1">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1" x='-50' y='0'></use>
+                    </svg>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="main-app col-md-8">
+      <div class="row">
+        <div class="hotel-list col-md-12">
+          <div *ngFor="let hotel of hotels | hotelfilter:'name':hotelName | hotelfilter:'stars':starFilter" class="row hotel-card module-application">
+            <div class="col-md-5">
+              <img src="./assets/images/hotels/{{ hotel.image }}" alt="" class="hotel-pic img-fluid">
+            </div>
+            <div class="col-md-4">
+              <h5 class="hotelTitleList">{{ hotel.name }}</h5>
+              <ul class="category-type" [attr.data-stars]="hotel.stars">
+                <li *ngFor="let index of [1, 2, 3, 4, 5]">
+                  <div *ngIf="index <= hotel.stars">
+                    <svg class="icon-star">
+                      <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1"></use>
+                    </svg>
+                  </div>
+                </li>
+              </ul>
+              <ul class="amenities-list">
+                <li *ngFor="let amenitie of hotel.amenities; let i = index">
+                  <img src="./assets/prod/icons/amenities/{{ hotel.amenities[i] }}.svg" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <p class="specs">Precio por noche por habitacion</p>
+              <div class="price-headline">
+                <span class="currency-type">ARS</span> <span class="amount">{{ hotel.price | number:'1.0-0'}}</span>
+              </div>
+              <a class="btn btn-lg btn-primary btn-view-hotel" href="#">Ver hotel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>

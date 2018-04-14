@@ -1,0 +1,13 @@
+{
+  "apiPort": 3000,
+  "enviroment": "development",
+  "version": "1.0",
+  "development":
+  {
+    "pathToApi": "./api/routes/routes.js"
+  },
+  "production":
+  {
+    "pathToApi": "./api/routes/prod/routes.js"
+  }
+}

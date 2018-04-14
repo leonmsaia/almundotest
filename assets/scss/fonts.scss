@@ -1,0 +1,32 @@
+@import 'colors.scss';
+
+.price-headline {
+  color: $orange;
+  text-align: center;
+  margin: 0px 0px 5px 0px;
+
+  .currency-type {
+    font-size: 20px;
+  }
+  .amount {
+    font-size: 40px;
+    margin-left: 5px;
+  }
+}
+
+.specs {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.hotelTitleList {
+  color: $lightblue;
+  margin-bottom: 0px;
+}
+
+.filter-headline {
+  color: $lightblue;
+  font-weight: bold;
+}

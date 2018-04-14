@@ -1,1 +1,8 @@
+// Bootstrap Main Framework
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+
+// Template Components
+@import 'colors.scss';
+@import 'structure.scss';
+@import 'buttons.scss';
+@import 'fonts.scss';

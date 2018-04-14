@@ -1,0 +1,23 @@
+.price-headline {
+  color: #df6800;
+  text-align: center;
+  margin: 0px 0px 5px 0px; }
+  .price-headline .currency-type {
+    font-size: 20px; }
+  .price-headline .amount {
+    font-size: 40px;
+    margin-left: 5px; }
+
+.specs {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0; }
+
+.hotelTitleList {
+  color: #157ab1;
+  margin-bottom: 0px; }
+
+.filter-headline {
+  color: #157ab1;
+  font-weight: bold; }

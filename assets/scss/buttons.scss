@@ -1,0 +1,30 @@
+@import 'colors.scss';
+
+.btn-view-hotel {
+  background-color: $blue;
+  border-color: $blue4;
+  width: 100%;
+  padding: 2px 0px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px $blue4;
+}
+
+.btn-action {
+  background-color: $blue;
+  border-color: $blue4;
+  width: 100%;
+  padding: 2px 0px;
+  font-size: 18px;
+}
+
+
+.btn-collapse {
+  float: right;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: $lightblue transparent transparent transparent;
+}
