@@ -24,10 +24,10 @@ Extras
 Añadir alguna capa de persistencia de datos.
 Implementar el CRUD de hoteles (solo a nivel API).
 
-## Instalacion de Dependencias NPM
+# Instalacion de Dependencias NPM
 Correr "npm install" para instalar todas las dependencias de la aplicacion (tanto API como App).
 
-### Compilacion de Assets
+# Compilacion de Assets
 Watchers:
 Correr "gulp watch".
 
@@ -39,11 +39,11 @@ Correr "gulp js".
 Correr "gulp bootjs".
 Correr "gulp jqjs".
 
-#### Server
+# Server
 Correr "ng serve" para iniciar el servidor de la aplicacion Angular.
 Correr "node app.js" para iniciar el servidor de la API en NodeJS + Express.
 
-##### Entornos
+# Entornos
 Configuración de entorno para API:
 En el archivo appconfig.json se puede configurar cambiando el valor del campo "enviroment".
 
