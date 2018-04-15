@@ -1,0 +1,31 @@
+@import 'colors.scss';
+
+@media only screen and (max-width: 576px) {
+
+  .price-module {
+    padding: 60px 15px;
+    border-top: 1px $gray5 dotted;
+  }
+
+  .hotel-card {
+    width: initial;
+  }
+
+  .headline-wrapp-mobile {
+
+    .headline-mobile-container {
+      margin: 0 auto;
+      width: auto;
+      display: table;
+
+      h5 {
+        float: left;
+      }
+      .btn-collapse {
+        float: left;
+        margin-left: 10px;
+        margin-top: 8px;
+      }
+    }
+  }
+}

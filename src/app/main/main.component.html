@@ -16,10 +16,19 @@
         <div class="col-md-12">
 
           <div class="module-application">
-            <div class="headline-wrap separatorSec">
+
+            <div class="headline-wrap d-none d-sm-block separatorSec">
               <h4>Filtros</h4>
             </div>
-            <div class="filter-module separatorSec">
+
+            <div class="headline-wrapp-mobile d-block d-sm-none">
+              <div class="headline-mobile-container">
+                <h5>Filtrar</h5>
+                <div class="btn-collapse" data-toggle="collapse" data-target=".btn-mobile-toggle"></div>
+              </div>
+            </div>
+
+            <div class="filter-module btn-mobile-toggle collapse show separatorSec">
 
               <form class="filter-form row">
                 <div class="col-md-12 title-module">
@@ -45,7 +54,7 @@
 
               </form>
             </div>
-            <div class="filter-module padding-h">
+            <div class="filter-module padding-h btn-mobile-toggle collapse show">
               <span class="filter-headline">
                 <svg class="icon-star">
                   <use xlink:href="./assets/prod/icons/filters/star.svg#Layer_1"></use>
@@ -131,7 +140,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 price-module">
               <p class="specs">Precio por noche por habitacion</p>
               <div class="price-headline">
                 <span class="currency-type">ARS</span> <span class="amount">{{ hotel.price | number:'1.0-0'}}</span>
