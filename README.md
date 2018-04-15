@@ -1,6 +1,8 @@
 # Almundo Hotel TEST APP
 Entorno de TEST para incorporacion a puesto de Dev. Frontend en Almundo.
 
+# Importante: Chequear Versiones de Node.JS y Angular + Angular-Cli para el correcto funcionamiento de la App.
+
 # Objetivos:
 Ejercicio 1: API Rest NodeJS
 Este punto consiste en armar un API REST en Node.js. El mismo será utilizado en el ejercicio 2.
